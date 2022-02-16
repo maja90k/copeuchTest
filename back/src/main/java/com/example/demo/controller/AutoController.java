@@ -60,10 +60,11 @@ public class AutoController {
     	}
     }
     
-    @PutMapping(value ="/reqPost/{id}")
-    public updateAnuncio( @PathVariable ("id") @RequestBoy  Long id)  {
-    	
-    }
+//    @PutMapping(value ="/reqPost/{id}")
+//    public updateAnuncio(@PathVariable ("id") Long id @Valid @RequestBody) {
+//    	
+//    	
+//    }
     
     @DeleteMapping(value="/reqPost/{id}" )
     public void delete(@PathVariable("id") int id) {
