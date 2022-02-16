@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Auto } from '../models/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,12 @@ import { environment } from 'src/environments/environment';
 export class AutoService {
 
   endpoint = environment.endpoint
+  auto : Auto = {
+    id: NaN,
+    marca: '',
+    modelo: '',
+    fecha_ingreso: '',
+  }
 
   constructor(private http: HttpClient) { }
 
@@ -26,12 +33,11 @@ export class AutoService {
   }
 
   deleteAuto(id: any) {
-    this.endpoint = `${this.endpoint}/reqPost/${id}`;
-    return this.http.delete(this.endpoint);
+    return this.http.delete(`${this.endpoint}/reqPost/${id}`);
   }
 
-  editAuto() {
-
+  editarAuto(auto : Auto) {
+    return this.http.put(`${this.endpoint}/reqPost/`,auto);
   }
 
 }

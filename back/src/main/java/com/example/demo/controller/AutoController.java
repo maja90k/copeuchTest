@@ -51,8 +51,6 @@ public class AutoController {
             	System.out.println("Error al ingresar");
         	}else {
                 autoService.saveAuto(auto);
-//                JsonObject json = Json.createObjectBuilder().add(auto, id).build();
-//                return auto;
                 System.out.println("Se guarda el auto con exito.");
         	}	
     	}catch(Exception ex) {
@@ -60,8 +58,8 @@ public class AutoController {
     	}
     }
     
-//    @PutMapping(value ="/reqPost/{id}")
-//    public updateAnuncio(@PathVariable ("id") Long id @Valid @RequestBody) {
+//    @PutMapping(value ="/reqPost/{modelo}")
+//    public @ResponseBody String updateAutomovil(@RequestBody Auto auto){
 //    	
 //    	
 //    }

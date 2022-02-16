@@ -47,15 +47,45 @@
                             <td>
                                 <div class="col-lg-5 col-md-6 col-12">
                                     <div class="mb-3">
-                                        <button type="button" class="btn btn-danger" (click)="eliminarAuto(auto.id)">Eliminar</button>
+                                        <button type="button" class="btn btn-danger"
+                                            (click)="eliminarAuto(auto.id)">Eliminar</button>
                                     </div>
                                     <div class="mb-3">
-                                        <button type="button" class="btn btn-warning" (click)="editarAuto(auto)">Editar</button>
+                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">Editar</button>
                                     </div>
                                 </div>
-
                             </td>
                         </tr>
+                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Editar Auto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Comienzo -->
+                                    <div class="row g-3">
+                                        <div class="col">
+                                            <input type="text" class="form-control"
+                                                placeholder="Me falto un poco de tiempo" aria-label="Marca">
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Modelo"
+                                                aria-label="Modelo">
+                                        </div>
+                                    </div>
+                                    <!-- Termino -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-outline-primary">Guardar Cambios</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </tbody>
                     <tbody *ngIf="autos.length <= 0">
                         <td colspan="3" class="text-center py-2">No hay autos ingresados.</td>

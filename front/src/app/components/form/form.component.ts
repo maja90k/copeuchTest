@@ -31,18 +31,17 @@ export class FormComponent implements OnInit {
     this.autoService.getAll().subscribe(auto => this.autos = auto);
   }
 
-  async eliminarAuto(id: number) {
+   eliminarAuto(id: number) {
     let respuesta = confirm('Se eliminara el Auto con ' + `${id}` + ' ' + 'seleccionado.');
     if (respuesta) {
-      await this.autoService.deleteAuto(id).subscribe();
-      this.getAutos();
+      this.autoService.deleteAuto(id).subscribe();
     } else {
       alert("Se cancelo la accion Eliminar el auto con id: " + `${id}`);
     }
     this.getAutos();
   }
 
-  async editarAuto(auto: Auto) {
+  editarAuto(modelo : Auto) {
 
   }
 
