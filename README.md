@@ -3,7 +3,7 @@ copeuchTest
 
 Una vez ya con el proyecto completo:
 
-#Front-end => //Tecnologias y Herramientas (desplegar en editor de texto como por ejemplo: SublimeText, VisualStudioCode, Atom) Angular 11 correr comando => situado la raiz del proyecto npm start (en caso de no tener angular instalado executar comando: ```npm i @angular/cli@latest```    ) O ng serve (en caso de no tener instalado el CLI de Angular Framework executar comando: 
+#Front-end => //Tecnologias y Herramientas (desplegar en editor de texto como por ejemplo: SublimeText, VisualStudioCode, Atom) Angular 11 correr comando => situado la raiz del proyecto npm start (en caso de no tener npm instalado executar comando: ```npm i -g```    ) O ng serve (en caso de no tener instalado el CLI de Angular Framework executar comando: 
 ```npm i -g @angular/cli@latest ``` )
 
 Nota: Para asegurar una instalacion correcta de npm y asi evitar errores ejecutamos en una cmd=> npm -v, y con el comando=> ng version aseguramos una correcta instalacion de la CLI de Angular.
